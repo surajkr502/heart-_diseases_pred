@@ -1,11 +1,11 @@
 import streamlit as st
 import pandas as pd
 import joblib 
-model=joblib.load('model_01_KNN_heart.pkl')
+model=joblib.load('model_logReg_01_Heart.pkl')
 scaler=joblib.load("scaler.pkl")
 expected_columns=joblib.load('columns.pkl')
 
-st.title("Heart stroke prediction by suraj ☺️💓")
+st.title("Heart stroke prediction by suraj💓")
 st.markdown('Provide the following details')
 
 age=st.slider('Age',18,100,40)
@@ -25,7 +25,7 @@ if st.button('Predect'):
     raw_input={
         'Age':age,
         'RestingBP':resting_bp,
-        'Cholesrerol':cholesterol,
+        'Cholesterol':cholesterol,
         'FastingBS':fasting_bs,
         'MaxHR':max_heartRate,
         'Oldpeak':oldpeak,
