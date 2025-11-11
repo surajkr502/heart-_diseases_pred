@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import joblib 
-model=joblib.load('model_logReg_01_Heart.pkl')
+model=joblib.load('model_01_svm_heart.pkl')
 scaler=joblib.load("scaler.pkl")
 expected_columns=joblib.load('columns.pkl')
 
@@ -50,3 +50,4 @@ if st.button('Predect'):
         st.error('⚠️High Risk of Heart Disease')
     else:
         st.success('💖✅Low Risk of Heart Disease')
+
